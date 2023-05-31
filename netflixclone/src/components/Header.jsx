@@ -22,7 +22,14 @@ const Header = () => {
       <Stream />
 
       <Faq />
+      {/* <section class="faq">
+      <div class="inner-container">
+        <div class="inner-title">
+          <h1>Frequently Asked Questions</h1>
+        </div>
       <Accordion />
+      </div>
+      </section> */}
 
       <Footer />
     </div>
