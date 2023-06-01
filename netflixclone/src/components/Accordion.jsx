@@ -11,15 +11,16 @@ const Accordion = () => {
   const renderAccordionItem = (index, title, content) => {
     const isActive = index === activeIndex;
     return (
-      <div key={index}>
-        <button
+      <ul key={index}>
+        <h2
           className={`accordion ${isActive ? "active" : ""}`}
           onClick={() => handleClick(index)}
         >
-          {title}
-        </button>
-        <div className={`panel ${isActive ? "show" : ""}`}>{content}</div>
-      </div>
+          {title} <i class="fas fa-plus"></i>
+          
+        </h2>
+        <p className={`panel ${isActive ? "show" : ""}`}>{content}</p>
+      </ul>
     );
   };
 
@@ -32,12 +33,12 @@ const Accordion = () => {
       )}
       {renderAccordionItem(
         1,
-        "Accordion 2",
+        " How much does NetFlix cost?",
         "Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime. 2"
       )}
       {renderAccordionItem(
         2,
-        "Accordion 3",
+        "Where can I watch?",
         "Netflix has an extensive library of feature films, documentaries, /n TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.3"
       )}
     </div>

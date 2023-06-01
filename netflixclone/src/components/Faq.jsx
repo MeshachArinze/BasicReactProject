@@ -29,7 +29,7 @@ const Faq = () => {
         </div>
 
         <ul>
-          {/* <li>
+          <li>
             <h2>
               What is Netflix <i class="fas fa-plus"></i>
             </h2>
@@ -91,7 +91,7 @@ const Faq = () => {
               TV shows, anime, award-winning Netflix originals, and more. Watch
               as much as you want, anytime you want.
             </p>
-          </li> */}
+          </li>
         </ul>
 
         <div class="email-form">
