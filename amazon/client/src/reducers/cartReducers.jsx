@@ -12,7 +12,6 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
     case CART_ADD_ITEM:
       const item = action.payload;
       const existItem = state.cartItems.find((x) => x.product === item.product);
-
       if (existItem) {
         return {
           ...state,
@@ -24,15 +23,13 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
       } else {
         return { ...state, error: "", cartItems: [...state.cartItems, item] };
       }
-
     case CART_REMOVE_ITEM:
       return {
         ...state,
         error: "",
         cartItems: state.cartItems.filter((x) => x.product !== action.payload),
       };
-
-     case CART_SAVE_SHIPPING_ADDRESS:
+    case CART_SAVE_SHIPPING_ADDRESS:
       return { ...state, shippingAddress: action.payload };
     case CART_SAVE_PAYMENT_METHOD:
       return { ...state, paymentMethod: action.payload };
@@ -40,8 +37,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
       return { ...state, error: action.payload };
     case CART_EMPTY:
       return { ...state, error: "", cartItems: [] };
-
     default:
-      break;
+      return state;
   }
 };

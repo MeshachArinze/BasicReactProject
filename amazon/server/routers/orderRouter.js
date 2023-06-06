@@ -1,16 +1,16 @@
-import express from 'express';
-import expressAsyncHandler from 'express-async-handler';
+const express = require('express');
+const expressAsyncHandler = require('express-async-handler');
 
-import Order from '../models/orderModel.js';
-import User from "../models/userModel.js";
-import Product from "../models/productModel.js";
-import {
+const Order = require('../models/orderModel.js');
+const User = require("../models/userModel.js");
+const Product = require("../models/productModel.js");
+const {
   isAdmin,
   isAuth,
   isSellerOrAdmin,
   mailgun,
   payOrderEmailTemplate,
-} from "../utils.js";
+}  = require("../utils.js");
 
 
 const orderRouter = express.Router();
@@ -209,4 +209,4 @@ orderRouter.put(
   })
 )
 
-export default orderRouter;
+module.exports = orderRouter;

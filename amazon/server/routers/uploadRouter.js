@@ -1,6 +1,6 @@
-import multer from "multer";
-import express from "express";
-import { isAuth } from "../utils.js";
+const multer = require("multer");
+const express = require("express");
+const { isAuth } = require("../utils.js");
 
 const uploadRouter = express.Router();
 
@@ -19,4 +19,4 @@ uploadRouter.post("/", isAuth, upload.single("image"), (req, res) => {
   res.send(`/${req.file.path}`);
 });
 
-export default uploadRouter;
+module.exports = uploadRouter;

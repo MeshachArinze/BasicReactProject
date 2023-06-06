@@ -1,8 +1,8 @@
-import * as FormData from "form-data";
-import Mailgun from "mailgun.js";
-import jwt from "jsonwebtoken";
+const FormData = require("form-data");
+const Mailgun = require("mailgun.js");
+const jwt = require("jsonwebtoken");
 
-export const generateToken = (user) => {
+ const generateToken = (user) => {
   return jwt.sign(
     {
       _id: user.id,
@@ -18,7 +18,7 @@ export const generateToken = (user) => {
   );
 };
 
-export const isAuth = (req, res, next) => {
+const isAuth = (req, res, next) => {
   const authorization = req.headers.authorization;
   if (authorization) {
     const token = authorization.slice(7, authorization.length);
@@ -40,7 +40,7 @@ export const isAuth = (req, res, next) => {
   }
 };
 
-export const isAdmin = (req, res, next) => {
+const isAdmin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     next();
   } else {
@@ -48,14 +48,14 @@ export const isAdmin = (req, res, next) => {
   }
 };
 
-export const isSeller = (req, res, next) => {
+const isSeller = (req, res, next) => {
   if (req.user && req.user.isSeller) {
     next();
   } else {
     res.status(401).send({ message: "Invalid Seller Token" });
   }
 };
-export const isSellerOrAdmin = (req, res, next) => {
+const isSellerOrAdmin = (req, res, next) => {
   if (req.user && (req.user.isSeller || req.user.isAdmin)) {
     next();
   } else {
@@ -63,20 +63,20 @@ export const isSellerOrAdmin = (req, res, next) => {
   }
 };
 
-// export const mailgun = () =>
+// const mailgun = () =>
 //   mg({
 //     apiKey: process.env.MAILGUN_API_KEY,
 //     domain: process.env.MAILGUN_DOMIAN,
 //   });
 
 const mailgun = new Mailgun(FormData);
-export const mg = mailgun.client({
+const mg = mailgun.client({
   username: "api",
   key: process.env.MAILGUN_API_KEY || "key-yourkeyhere",
   domain: process.env.MAILGUN_DOMIAN,
 });
 
-export const payOrderEmailTemplate = (order) => {
+const payOrderEmailTemplate = (order) => {
   return `<h1>Thanks for shopping with us</h1>
   <p>
   Hi ${order.user.name},</p>
@@ -138,3 +138,14 @@ export const payOrderEmailTemplate = (order) => {
   </p>
   `;
 };
+
+module.exports = {
+  generateToken,
+  isAuth,
+  isAdmin,
+  isSeller,
+  isSellerOrAdmin,
+  mailgun,
+  payOrderEmailTemplate,
+  mg
+}
