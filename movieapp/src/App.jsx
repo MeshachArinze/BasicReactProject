@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import useSWR from "swr";
 
 import MovieCard from "./MovieCard";
 import SearchIcon from "./assets/search.svg";
