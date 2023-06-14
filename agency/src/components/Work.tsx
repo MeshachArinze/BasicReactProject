@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import Nav from './Nav';
 
 const Work: React.FC = () => {
   return (
@@ -7,44 +8,7 @@ const Work: React.FC = () => {
       <header>
         <div className="logo">Creative Agency</div>
         <div className="toggle"></div>
-        <div className="navigation">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/services">Services</Link>
-            </li>
-            <li>
-              <Link to="/work">Work</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-          <div className="social-bar">
-            <ul>
-              <li>
-                <Link to="https://facebook.com">
-                  <img src="images/facebook.png"  alt="" />
-                </Link>
-              </li>
-              <li>
-                <Link to="https://twitter.com">
-                  <img src="images/twitter.png"  alt="" />
-                </Link>
-              </li>
-              <li>
-                <Link to="https://instagram.com">
-                  <img src="images/instagram.png"  alt="" />
-                </Link>
-              </li>
-            </ul>
-            <Link to="mailto:you@email.com" className="email-icon">
-              <img src="images/email.png" alt="" />
-            </Link>
-          </div>
-        </div>
+        <Nav />
       </header>
 
       <section>
@@ -62,97 +26,97 @@ const Work: React.FC = () => {
 
         <div className="portfolio">
           <div className="item">
-            <img src="images/portfolio-item1.jpg" alt="" />
+            <img src="/images/portfolio-item1.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item2.jpg" alt="" />
+            <img src="/images/portfolio-item2.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item3.jpg" alt="" />
+            <img src="/images/portfolio-item3.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item4.jpg" alt="" />
+            <img src="/images/portfolio-item4.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item5.jpg" alt="" />
+            <img src="/images/portfolio-item5.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item6.jpg" alt="" />
+            <img src="/images/portfolio-item6.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item7.jpg" alt="" />
+            <img src="/images/portfolio-item7.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item8.jpg" alt="" />
+            <img src="/images/portfolio-item8.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item9.jpg" alt="" />
+            <img src="/images/portfolio-item9.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item10.jpg" alt="" />
+            <img src="/images/portfolio-item10.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item11.jpg" alt="" />
+            <img src="/images/portfolio-item11.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item12.jpg" alt="" />
+            <img src="/images/portfolio-item12.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item13.jpg" alt="" />
+            <img src="/images/portfolio-item13.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item14.jpg" alt="" />
+            <img src="/images/portfolio-item14.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item15.jpg" alt="" />
+            <img src="/images/portfolio-item15.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>
           </div>
           <div className="item">
-            <img src="images/portfolio-item16.jpg" alt="" />
+            <img src="/images/portfolio-item16.jpg" alt="" />
             <div className="action">
               <Link to="#">Launch</Link>
             </div>

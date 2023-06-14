@@ -26,23 +26,23 @@ const Contact: React.FC = () => {
             <ul>
               <li>
                 <Link to="https://facebook.com">
-                  <img src="images/facebook.png"  alt="" />
+                  <img src="/images/facebook.png"  alt="" />
                 </Link>
               </li>
               <li>
                 <Link to="https://twitter.com">
-                  <img src="images/twitter.png"  alt="" />
-                </a>
+                  <img src="/images/twitter.png"  alt="" />
+                </Link>
               </li>
               <li>
                 <Link to="https://instagram.com">
-                  <img src="images/instagram.png"  alt="" />
-                </a>
+                  <img src="/images/instagram.png"  alt="" />
+                </Link>
               </li>
             </ul>
             <Link to="mailto:you@email.com" className="email-icon">
-              <img src="images/email.png" alt="" />
-            </a>
+              <img src="/images/email.png" alt="" />
+            </Link>
           </div>
         </div>
       </header>
@@ -90,26 +90,26 @@ const Contact: React.FC = () => {
 
           <div className="contact-info">
             <div className="info-box">
-              <img src="images/address.png" className="contact-icon" alt="" />
+              <img src="/images/Linkddress.png" className="contact-icon" alt="" />
               <div className="details">
                 <h4>Address</h4>
                 <p>28 Neon Tower, New York City, USA</p>
               </div>
             </div>
             <div className="info-box">
-              <img src="images/email.png" className="contact-icon" alt="" />
+              <img src="/images/email.png" className="contact-icon" alt="" />
               <div className="details">
                 <h4>Email</h4>
-                <Link to="mailto:anyone@example.com">anyone@example.com</a>
-                <Link to="mailto:anyone@example.com">anyone@example.com</a>
+                <Link to="mailto:anyone@example.com">anyone@example.com</Link>
+                <Link to="mailto:anyone@example.com">anyone@example.com</Link>
               </div>
             </div>
             <div className="info-box">
-              <img src="images/call.png" className="contact-icon" alt="" />
+              <img src="/images/call.png" className="contact-icon" alt="" />
               <div className="details">
                 <h4>Call</h4>
-                <Link to="tel:+19785555555">+1 978 555 5555</a>
-                <Link to="tel:+19784444444">+1 978 555 4444</a>
+                <Link to="tel:+19785555555">+1 978 555 5555</Link>
+                <Link to="tel:+19784444444">+1 978 555 4444</Link>
               </div>
             </div>
           </div>
