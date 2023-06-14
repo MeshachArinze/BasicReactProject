@@ -1,14 +1,27 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import {
+
+  Route,
+
+  Routes,
+} from "react-router-dom";
 
 import "./App.css";
 import Home from "./components/Home";
+import Work from "./components/Work";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
 
-function App() {
+const App: React.FC = () =>  {
   return (
     <>
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work/*" element={<Work />} />
+        <Route path="/services/*" element={<Services />} />
+        <Route path="/contact/*" element={<Contact />} />
+      </Routes>
     </>
   );
 }
