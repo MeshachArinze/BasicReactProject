@@ -1,40 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
+import { navIcon, navdata } from "../data";
 
 const Nav: React.FC = () => {
   return (
     <div className="navigation">
       <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/services">Services</Link>
-        </li>
-        <li>
-          <Link to="/work">Work</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
+        { navdata?.map((data) => {
+          return (
+            <li key={data.id}>
+              <Link to={data.ref}>{data.name}</Link>
+            </li>
+          );
+        }) }
       </ul>
+
       <div className="social-bar">
         <ul>
-          <li>
-            <Link to="https://facebook.com">
-              <img src="/images/facebook.png" alt="" />
-            </Link>
-          </li>
-          <li>
-            <Link to="https://twitter.com">
-              <img src="/images/twitter.png" alt="" />
-            </Link>
-          </li>
-          <li>
-            <Link to="https://instagram.com">
-              <img src="/images/instagram.png" alt="" />
-            </Link>
-          </li>
+          {navIcon?.map((icon) => (
+            <li key={icon["id"]}>
+              <Link to={icon.to}>
+                <img src={icon["src"]} alt="" />
+              </Link>
+            </li>
+          ))}
         </ul>
         <Link to="mailto:you@email.com" className="email-icon">
           <img src="/images/email.png" alt="" />
