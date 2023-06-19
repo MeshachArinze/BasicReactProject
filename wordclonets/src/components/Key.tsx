@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext } from "react";
 import { AppContext } from "./context";
 
@@ -8,7 +8,7 @@ function Key({ keyVal, bigKey, disabled }: {
     disabled: any;
 }): JSX.Element {
   const { gameOver, onSelectLetter, onDelete, onEnter } =
-    useContext(AppContext);
+    useContext(AppContext) as any;
 
   const selectLetter: () => void = () => {
     if (gameOver.gameOver) return;

@@ -1,3 +1,3 @@
 import React, { createContext } from "react";
 
-export const AppContext:React.Context<unknown> = createContext();
+export const AppContext = createContext();
