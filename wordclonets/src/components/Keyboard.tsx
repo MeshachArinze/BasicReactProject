@@ -1,4 +1,6 @@
-/* eslint-disable react/jsx-key */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 /* eslint-disable no-unused-vars */
 import  { useCallback, useEffect, useContext } from "react";
 import Key from "./Key";
@@ -15,10 +17,10 @@ function Keyboard() {
     onSelectLetter,
     onEnter,
     onDelete,
-  } = useContext(AppContext);
+  } = useContext(AppContext) as any;
 
   const handleKeyboard = useCallback(
-    (event) => {
+    (event: any) => {
       if (gameOver.gameOver) return;
       if (event === "Enter") {
         onEnter();

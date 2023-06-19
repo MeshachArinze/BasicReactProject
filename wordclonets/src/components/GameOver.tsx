@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-unused-vars */
 import  { useContext } from "react";
 import { AppContext } from "./context";
@@ -5,7 +6,7 @@ import { AppContext } from "./context";
 const GameOver: () => JSX.Element = () => {
   const { currAttempt, gameOver, correctWord } = useContext(
     AppContext
-  ) as InnerHTML;
+  ) as any;
   return (
     <div className="gameOver">
       <h3>
