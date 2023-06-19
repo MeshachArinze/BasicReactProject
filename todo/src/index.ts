@@ -1,18 +1,18 @@
 import { v4 as uuidv4 } from "uuid";
-
+import "@total-typescript/ts-reset/json-parse";
 
 type Task = {
   id: string;
   title: string;
   completed: boolean;
   createdAt: Date;
-};
+}
 
 const list = document.querySelector<HTMLUListElement>("#list")
 const form = document.getElementById("new-task-form") as HTMLFormElement | null
 const input = document.querySelector<HTMLInputElement>("#new-task-title");
 
-const tasks: Task[] = loadTasks();
+const tasks: Task[] = loadTasks()
 
 tasks.forEach(addListItem)
 
