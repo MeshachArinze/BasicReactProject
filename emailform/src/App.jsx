@@ -15,6 +15,8 @@ function App() {
     if (!email || !subject || !message) {
       return toast.error("Please fill email, subject and message");
     }
+    setSubject("");
+    setMessage("");
     try {
       setLoading(true);
       const { data } = await axios.post(`/api/email`, {
@@ -24,6 +26,8 @@ function App() {
       });
       setLoading(false);
       toast.success(data.message);
+      setSubject("");
+      setMessage("");
     } catch (err) {
       setLoading(false);
       toast.error(
@@ -33,6 +37,7 @@ function App() {
       );
     }
   };
+  
   return (
     <div className="App">
       <ToastContainer position="bottom-center" limit={1} />
